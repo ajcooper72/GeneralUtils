@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.getTranslatedMessage</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>getTranslatedMessage</name>
+        <script><![CDATA[/**SNDOC
+  @name getTranslatedMessage
+  @description Finds a message in the sys_ui_message table for the specified language
+  @param {string} [messageKey] - key to find in the message table
+  @param {string} [language] - language code to return (i.e. de, fr, it)
+  @param {string} [messageParams] - (optional) parameters to use when building the message
+  @returns {string} formatted translated message
+*/
+function getTranslatedMessage(messageKey, language, messageParams) {
+    var SYSTEM_LANGUAGE = gs.getProperty('glide.sys.language', 'en');
+
+    // Check if the specified language is active
+    var isValidLanguage = new global.GlideQuery('sys_language')
+        .where('active', true)
+        .where('id', language)
+        .selectOne() // only need to check for the existence
+        .isPresent(); // returns true/false if we found a record
+
+    // set the language to system if the requested language wasn't found
+    language = isValidLanguage ? language : SYSTEM_LANGUAGE;
+
+    var msg = new global.GlideQuery('sys_ui_message')
+        .getBy({ // look for the message for the specified language
+            "key": messageKey,
+            "language": language
+        }, ["message"])
+        .orElse(
+            // didn't find for the request language, so look for the system language
+            new global.GlideQuery('sys_ui_message')
+            .getBy({
+                "key": messageKey,
+                "language": SYSTEM_LANGUAGE
+            }, ["message"])
+            .orElse(
+                // just return the original message key
+                {
+                    "message": messageKey
+                }
+            )
+        )["message"]; // we only need the message
+
+    if (messageParams && messageParams.length > 0) {
+        // if parameters for the message were passed then apply them to the message
+        return gs.getMessage(msg, messageParams);
+    } else {
+        // just return the message without parameters
+        return msg;
+    }
+
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-02 16:20:39</sys_created_on>
+        <sys_id>71b3c1bb1b48411001e40d82604bcb15</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>getTranslatedMessage</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</sys_scope>
+        <sys_update_name>sys_script_include_71b3c1bb1b48411001e40d82604bcb15</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-03 09:43:27</sys_updated_on>
+    </sys_script_include>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</claim_owner_scope>
+        <claim_timestamp>17d7fad0d510000001</claim_timestamp>
+        <metadata_update_name>sys_script_include_71b3c1bb1b48411001e40d82604bcb15</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>GeneralUtils</previous_claim_name>
+        <previous_claim_scope>0e3338441b18811001e40d82604bcbd3</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-03 09:43:07</sys_created_on>
+        <sys_id>925330841b18811001e40d82604bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-03 09:43:07</sys_updated_on>
+    </sys_claim>
+</record_update>

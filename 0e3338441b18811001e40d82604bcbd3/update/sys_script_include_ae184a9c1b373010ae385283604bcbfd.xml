@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.GetFieldValuesAjax</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>AJAX script to retrieve fields from a specified record.  Returns all requested fields along with display values.</description>
+        <name>GetFieldValuesAjax</name>
+        <script><![CDATA[var GetFieldValuesAjax = Class.create();
+GetFieldValuesAjax.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+
+    getValues: function () {
+        var table = this.getParameter("sysparm_table_name");
+        var sys_id = this.getParameter("sysparm_sys_id");
+        var fields = '' + this.getParameter("sysparm_field_names");
+
+        return JSON.stringify(
+            this._getValues(table, sys_id, fields.split(','))
+        );
+    },
+
+    /**SNDOC
+     @name _getValues
+     @private
+     @description 
+     Get the requested values from the table/record specified.
+     When specifying the field names you can dot walk into related fields, however you cannot get the original field AND any dot walked fields.
+     i.e. you can specify [ "caller_id" ] but not [ "caller_id", "caller_id.manager"]
+     This is a limitation of the GlideQuery API.
+     @param {string} [table_name]- table to get record from
+     @param {string} [record_sys_id] - sys_id of record to query
+     @param {array} [field_names] - list of field names to retrieve
+     @returns {JSON} JSON object containing each field and its display equivalent
+     @example
+     _getValues('sys_user', '62826bf03710200044e0bfc8bcbe5df1', ['user_name', 'first_name', 'last_name', 'email', 'manager.email' ])
+    */
+    _getValues: function (table, sys_id, fields) {
+        try {
+            fields = this._getValidFieldNames(table, fields);
+            // add the $DISPLAY equivalents for the requested fields
+            var getFields = [].concat(fields);
+            getFields.forEach(function (e, i, arr) {
+                arr.push(e + "$DISPLAY");
+            });
+
+            // use GlideQuery to retrieve the fields from the record and map to new JSON object
+            // i.e.
+            // {
+            //    "state": {
+            //      "value": 2,
+            //      "displayValue": "In Progress"
+            //    }
+            // }
+            var gq = new GlideQuery(table)
+                .where('sys_id', sys_id)
+                .select(getFields)
+                .map(function (_record) {
+                    var json = {};
+                    fields.forEach(function (_field) {
+                        json[_field] = {
+                            "value": _field.split(".").reduce(function (obj, prop) {
+                                return obj[prop];
+                            }, _record),
+                            "displayValue": (_field + "$DISPLAY").split(".").reduce(function (obj, prop) {
+                                return obj[prop];
+                            }, _record)
+                        };
+                    });
+
+                    return json;
+                }, this)
+                .reduce(function (arr, e) {
+                    arr.push(e);
+                    return arr;
+                }, []);
+
+            return gq.length > 0 ? gq[0] : {};
+
+        } catch (e) {
+            gs.error("(GetFieldValuesAjax) Problem getting field values " + e.toString());
+            return {};
+        }
+    },
+
+    /**SNDOC
+     @name _getValidFieldNames
+     @private
+     @description 
+     Get a list of valid fields for the table
+     @param {string} [table_name]- table to get record from
+     @param {array} [field_names] - list of field names to check
+     @returns {array} List of valid field names
+    */
+    _getValidFieldNames: function (table_name, field_names) {
+        // get an instance of the table so we can check the fields
+        var grCheckTable = new GlideRecord(table_name);
+        grCheckTable.initialize();
+
+        var validFields = field_names.map(function (_field) {
+            var fieldName = _field.split('.')[0];
+            if (grCheckTable.isValidField(fieldName)) {
+                return _field;
+            } else {
+                gs.error(gs.getMessage("(GetFieldValuesAjax) Field {0} is not a valid field on table {1}",
+                    [_field, table_name]));
+            }
+        }).filter(Boolean);
+
+        return validFields;
+    },
+
+    type: 'GetFieldValuesAjax'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-09 14:02:54</sys_created_on>
+        <sys_id>ae184a9c1b373010ae385283604bcbfd</sys_id>
+        <sys_mod_count>76</sys_mod_count>
+        <sys_name>GetFieldValuesAjax</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</sys_scope>
+        <sys_update_name>sys_script_include_ae184a9c1b373010ae385283604bcbfd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-03 16:16:05</sys_updated_on>
+    </sys_script_include>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</claim_owner_scope>
+        <claim_timestamp>17d7fadbad70000001</claim_timestamp>
+        <metadata_update_name>sys_script_include_ae184a9c1b373010ae385283604bcbfd</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>GeneralUtils</previous_claim_name>
+        <previous_claim_scope>0e3338441b18811001e40d82604bcbd3</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-03 09:43:51</sys_created_on>
+        <sys_id>81837c441bd4811001e40d82604bcb6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-03 09:43:51</sys_updated_on>
+    </sys_claim>
+</record_update>
