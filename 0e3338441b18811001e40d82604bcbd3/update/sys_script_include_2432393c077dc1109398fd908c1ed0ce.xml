@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.cleanHTML</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>cleanHTML</name>
+        <script><![CDATA[function cleanHTML(html_str) {
+
+    function _decodeHTMLtags(str) { // decode tags
+        // first, formatting tags
+        str = str.replace(/<\s*br\s*\/?\s*>/g, "\r\n");		// <br/> => CR-NL
+        str = str.replace(/<\s*\/\s*p\s*>/g, "\r\n");		// </p> => CR-NL
+        str = str.replace(/<\s*h\d\s*>/g, "\r\n");			// <hN> => CR-NL
+        str = str.replace(/<\s*\/\s*h\d\s*>/g, "\r\n\r\n");	// </hN> => CR-NL-CR-NL
+
+        // strip the rest
+        str = str.replace(/<\s*\/?([^>]*)\s*>/g, "");
+        return str;
+    }
+
+    function _decodeHTMLspecial(str) { // decode special characters
+        // first, numerics
+        str = str.replace(/&#(\d+);/g, function (match, dec) {
+            return String.fromCharCode(dec); //Returns the special character from the decimal code representation
+        });
+
+        // second, named
+        str = str.replace(/&([^;]+);/g, function (match, special) {
+            var specialChars = [
+                { code: "quot", value: '"' },	//quotation mark
+                { code: "apos", value: "'" },	// apostrophe 
+                { code: "amp", value: "&" },	// ampersand
+                { code: "lt", value: "<" },	// less-than
+                { code: "gt", value: ">" }	// greater-than
+            ];
+            for (code in specialChars) {
+                if (special == specialChars[code].code) {
+                    return specialChars[code].value;
+                }
+            }
+            return "";		// Returned for &rubbish; or &unknown;
+        });
+        return str;
+    }
+
+
+    var retVal = _decodeHTMLtags(html_str);		// Remove tags
+    retVal = _decodeHTMLspecial(retVal);	// Replace special characters
+    return retVal;
+
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>aidan.cooper</sys_created_by>
+        <sys_created_on>2022-02-18 11:48:07</sys_created_on>
+        <sys_id>2432393c077dc1109398fd908c1ed0ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>cleanHTML</sys_name>
+        <sys_package display_value="GeneralUtils" source="0e3338441b18811001e40d82604bcbd3">0e3338441b18811001e40d82604bcbd3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</sys_scope>
+        <sys_update_name>sys_script_include_2432393c077dc1109398fd908c1ed0ce</sys_update_name>
+        <sys_updated_by>aidan.cooper</sys_updated_by>
+        <sys_updated_on>2022-02-18 11:48:07</sys_updated_on>
+    </sys_script_include>
+</record_update>

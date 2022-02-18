@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.GeneralDateUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Various date utilities</description>
+        <name>GeneralDateUtils</name>
+        <script><![CDATA[var GeneralDateUtils = Class.create();
+GeneralDateUtils.prototype = {
+
+	initialize: function() {
+	},
+
+	type: 'GeneralDateUtils'
+};
+
+GeneralDateUtils.DAY_IN_MS = 86400000;
+
+/*
+ * getDayOfYear
+ * Returns the day of the year for the current year
+ */
+GeneralDateUtils.getDayOfYear = function() {
+
+	var gdt_start = new GlideDateTime();
+	var gdt_today = new GlideDateTime();
+
+	gdt_start.setMonthUTC(12);
+	gdt_start.setDayOfMonthUTC(31);
+	gdt_start.setYearUTC(gdt_start.getYearUTC() - 1);
+
+	var dur = GlideDateTime.subtract(gdt_start, gdt_today);
+	return dur.getNumericValue() / this.DAY_IN_MS;
+
+};
+
+/*
+ * getDaysInYear
+ * Gets the number of days in the year for the given year
+ * If year is not provided, then current year
+ */
+GeneralDateUtils.getDaysInYear = function(year) {
+	var gdt_start = new GlideDateTime();
+	var gdt_end = new GlideDateTime();
+	year = year | gdt_start.getYearUTC();
+
+	// set start date to 1st January for the specified year
+	gdt_start.setMonthUTC(1);
+	gdt_start.setDayOfMonthUTC(1);
+	gdt_start.setYearUTC(year);
+
+	// set the end date to 1st January the following year
+	gdt_end.setYearUTC(year + 1);
+	gdt_end.setMonthUTC(1);
+	gdt_end.setDayOfMonthUTC(1);
+
+	var dur = GlideDateTime.subtract(gdt_start, gdt_end);
+	return dur.getNumericValue() / this.DAY_IN_MS;
+};
+
+/*
+ * getPercentageComplete
+ * returns the percentage for how complete the year is
+ */
+GeneralDateUtils.getPercentageComplete = function() {
+	var days_in_year = this.getDaysInYear();
+	var current_day = this.getDayOfYear();
+	var percentage_complete = (100 / days_in_year) * current_day;
+	return Math.floor(percentage_complete);
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>aidan.cooper</sys_created_by>
+        <sys_created_on>2022-02-18 11:52:28</sys_created_on>
+        <sys_id>ac03b93c077dc1109398fd908c1ed0ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GeneralDateUtils</sys_name>
+        <sys_package display_value="GeneralUtils" source="0e3338441b18811001e40d82604bcbd3">0e3338441b18811001e40d82604bcbd3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</sys_scope>
+        <sys_update_name>sys_script_include_ac03b93c077dc1109398fd908c1ed0ba</sys_update_name>
+        <sys_updated_by>aidan.cooper</sys_updated_by>
+        <sys_updated_on>2022-02-18 11:52:28</sys_updated_on>
+    </sys_script_include>
+</record_update>
