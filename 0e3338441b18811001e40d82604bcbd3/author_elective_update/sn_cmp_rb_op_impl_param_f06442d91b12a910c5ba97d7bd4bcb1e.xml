@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_cmp_rb_op_impl_param">
+    <sn_cmp_rb_op_impl_param action="DELETE">
+        <applicable_to/>
+        <datasource>1</datasource>
+        <datasourcevalue/>
+        <defaultvalue>${parameter.StackOrchestrationTemplate}</defaultvalue>
+        <error_text/>
+        <help_text/>
+        <host/>
+        <ismandatory>false</ismandatory>
+        <name>StackOrchestrationTemplate</name>
+        <op_param/>
+        <operation display_value="Deprovision">146402d91b12a910c5ba97d7bd4bcbe5</operation>
+        <order>1</order>
+        <read_only>false</read_only>
+        <regex/>
+        <step display_value="Stack Orchestration Interface.Delete Stack">a06402d91b12a910c5ba97d7bd4bcbfd</step>
+        <sys_class_name>sn_cmp_rb_op_impl_param</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-18 15:17:27</sys_created_on>
+        <sys_id>f06442d91b12a910c5ba97d7bd4bcb1e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>StackOrchestrationTemplate</sys_name>
+        <sys_package display_value="GeneralUtils" source="0e3338441b18811001e40d82604bcbd3">0e3338441b18811001e40d82604bcbd3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</sys_scope>
+        <sys_update_name>sn_cmp_rb_op_impl_param_f06442d91b12a910c5ba97d7bd4bcb1e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-18 15:17:27</sys_updated_on>
+        <ui_data_type/>
+        <value/>
+        <visibilty>false</visibilty>
+    </sn_cmp_rb_op_impl_param>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</application>
+        <file_path/>
+        <instance_id>11fd2e98dbccc41091232f17d496192b</instance_id>
+        <instance_name>dev93507</instance_name>
+        <name>sn_cmp_rb_op_impl_param_f06442d91b12a910c5ba97d7bd4bcb1e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_cmp_rb_op_impl_param"><sn_cmp_rb_op_impl_param action="INSERT_OR_UPDATE"><applicable_to/><datasource>1</datasource><datasourcevalue/><defaultvalue>${parameter.StackOrchestrationTemplate}</defaultvalue><error_text/><help_text/><host/><ismandatory>false</ismandatory><name>StackOrchestrationTemplate</name><op_param/><operation display_value="Deprovision">146402d91b12a910c5ba97d7bd4bcbe5</operation><order>1</order><read_only>false</read_only><regex/><step display_value="Stack Orchestration Interface.Delete Stack">a06402d91b12a910c5ba97d7bd4bcbfd</step><sys_class_name>sn_cmp_rb_op_impl_param</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-04-18 15:17:27</sys_created_on><sys_id>f06442d91b12a910c5ba97d7bd4bcb1e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>StackOrchestrationTemplate</sys_name><sys_package display_value="GeneralUtils" source="0e3338441b18811001e40d82604bcbd3">0e3338441b18811001e40d82604bcbd3</sys_package><sys_policy/><sys_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</sys_scope><sys_update_name>sn_cmp_rb_op_impl_param_f06442d91b12a910c5ba97d7bd4bcb1e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-04-18 15:17:27</sys_updated_on><ui_data_type/><value/><visibilty>false</visibilty></sn_cmp_rb_op_impl_param></record_update>]]></payload>
+        <payload_hash>-594211097</payload_hash>
+        <record_name>StackOrchestrationTemplate</record_name>
+        <reverted_from/>
+        <source>76fcb2f31b012110c5ba97d7bd4bcbc4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-18 15:17:27</sys_created_on>
+        <sys_id>3c6442d91b12a910c5ba97d7bd4bcb26</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18794f131520000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-18 15:17:27</sys_updated_on>
+        <type>Operation Parameter</type>
+        <update_guid>b06442d9d612a91054b0e2abbb104326</update_guid>
+        <update_guid_history>b06442d9d612a91054b0e2abbb104326:-594211097,786442d90012a910fd053007c6407124:502800908,346442d91412a91043381675c51c6c23:-594211097</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="StackOrchestrationTemplate">016442d91b12a910c5ba97d7bd4bcb40</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-18 15:17:28</sys_created_on>
+        <sys_db_object display_value="" name="sn_cmp_rb_op_impl_param">sn_cmp_rb_op_impl_param</sys_db_object>
+        <sys_id>237083bf0997437ca40ad4d9725a8090</sys_id>
+        <sys_metadata>f06442d91b12a910c5ba97d7bd4bcb1e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>StackOrchestrationTemplate</sys_name>
+        <sys_package display_value="GeneralUtils" source="0e3338441b18811001e40d82604bcbd3">0e3338441b18811001e40d82604bcbd3</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</sys_scope>
+        <sys_scope_delete display_value="">1fb02804876a4bd4876760612ddad339</sys_scope_delete>
+        <sys_update_name>sn_cmp_rb_op_impl_param_f06442d91b12a910c5ba97d7bd4bcb1e</sys_update_name>
+        <sys_update_version display_value="sn_cmp_rb_op_impl_param_f06442d91b12a910c5ba97d7bd4bcb1e">3c6442d91b12a910c5ba97d7bd4bcb26</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-18 15:17:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

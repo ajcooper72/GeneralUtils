@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_cmp_bp_rule">
+    <sn_cmp_bp_rule action="INSERT_OR_UPDATE">
+        <cat_item display_value="New AWS LAMP Stack">f7348e991b12a910c5ba97d7bd4bcb1e</cat_item>
+        <cat_variable display_value="Location">8094cad91b12a910c5ba97d7bd4bcbca</cat_variable>
+        <description>TriggerChangeEvent UserGroup</description>
+        <name>TriggerChangeEvent UserGroup</name>
+        <order>130</order>
+        <status>1</status>
+        <sys_class_name>sn_cmp_bp_rule</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-18 15:18:23</sys_created_on>
+        <sys_id>92944ed91b12a910c5ba97d7bd4bcb72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TriggerChangeEvent UserGroup</sys_name>
+        <sys_package display_value="GeneralUtils" source="0e3338441b18811001e40d82604bcbd3">0e3338441b18811001e40d82604bcbd3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</sys_scope>
+        <sys_update_name>sn_cmp_bp_rule_92944ed91b12a910c5ba97d7bd4bcb72</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-18 15:18:23</sys_updated_on>
+    </sn_cmp_bp_rule>
+</record_update>

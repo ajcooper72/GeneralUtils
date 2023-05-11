@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="DELETE">
+        <catalog_item display_value="New AWS LAMP Stack">f7348e991b12a910c5ba97d7bd4bcb1e</catalog_item>
+        <catalog_variable>IO:fa848ad91b12a910c5ba97d7bd4bcb89</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>false</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-18 15:18:09</sys_created_on>
+        <sys_id>32848ad91b12a910c5ba97d7bd4bcbd5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>cloudTaskWorkflowInput</sys_name>
+        <sys_package display_value="GeneralUtils" source="0e3338441b18811001e40d82604bcbd3">0e3338441b18811001e40d82604bcbd3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_32848ad91b12a910c5ba97d7bd4bcbd5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-18 15:18:09</sys_updated_on>
+        <table/>
+        <ui_policy display_value="New AWS LAMP Stack UI policy">72848ad91b12a910c5ba97d7bd4bcbd0</ui_policy>
+        <variable>cloudTaskWorkflowInput</variable>
+        <variable_set/>
+        <visible>false</visible>
+    </catalog_ui_policy_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</application>
+        <file_path/>
+        <instance_id>11fd2e98dbccc41091232f17d496192b</instance_id>
+        <instance_name>dev93507</instance_name>
+        <name>catalog_ui_policy_action_32848ad91b12a910c5ba97d7bd4bcbd5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action"><catalog_ui_policy_action action="INSERT_OR_UPDATE"><catalog_item display_value="New AWS LAMP Stack">f7348e991b12a910c5ba97d7bd4bcb1e</catalog_item><catalog_variable>IO:fa848ad91b12a910c5ba97d7bd4bcb89</catalog_variable><cleared>false</cleared><disabled>ignore</disabled><field/><mandatory>false</mandatory><order>100</order><sys_class_name>catalog_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-04-18 15:18:09</sys_created_on><sys_id>32848ad91b12a910c5ba97d7bd4bcbd5</sys_id><sys_mod_count>0</sys_mod_count><sys_name>cloudTaskWorkflowInput</sys_name><sys_package display_value="GeneralUtils" source="0e3338441b18811001e40d82604bcbd3">0e3338441b18811001e40d82604bcbd3</sys_package><sys_policy/><sys_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</sys_scope><sys_update_name>catalog_ui_policy_action_32848ad91b12a910c5ba97d7bd4bcbd5</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-04-18 15:18:09</sys_updated_on><table/><ui_policy display_value="New AWS LAMP Stack UI policy">72848ad91b12a910c5ba97d7bd4bcbd0</ui_policy><variable>cloudTaskWorkflowInput</variable><variable_set/><visible>false</visible></catalog_ui_policy_action></record_update>]]></payload>
+        <payload_hash>1474286245</payload_hash>
+        <record_name>cloudTaskWorkflowInput</record_name>
+        <reverted_from/>
+        <source>76fcb2f31b012110c5ba97d7bd4bcbc4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-18 15:18:09</sys_created_on>
+        <sys_id>c7848ad91b12a910c5ba97d7bd4bcbfe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18794f1d46a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-18 15:18:09</sys_updated_on>
+        <type>Catalog UI Policy Action</type>
+        <update_guid>cf848ad93412a910bc9e23c2a084f3fd</update_guid>
+        <update_guid_history>cf848ad93412a910bc9e23c2a084f3fd:1474286245</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="cloudTaskWorkflowInput">e9bbf2a81b3a2910c5ba97d7bd4bcba8</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-11 07:55:08</sys_created_on>
+        <sys_db_object display_value="" name="catalog_ui_policy_action">catalog_ui_policy_action</sys_db_object>
+        <sys_id>43b34052878443a193f508f0625f55a1</sys_id>
+        <sys_metadata>32848ad91b12a910c5ba97d7bd4bcbd5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>cloudTaskWorkflowInput</sys_name>
+        <sys_package display_value="GeneralUtils" source="0e3338441b18811001e40d82604bcbd3">0e3338441b18811001e40d82604bcbd3</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</sys_scope>
+        <sys_scope_delete display_value="">1fb02804876a4bd4876760612ddad339</sys_scope_delete>
+        <sys_update_name>catalog_ui_policy_action_32848ad91b12a910c5ba97d7bd4bcbd5</sys_update_name>
+        <sys_update_version display_value="catalog_ui_policy_action_32848ad91b12a910c5ba97d7bd4bcbd5">c7848ad91b12a910c5ba97d7bd4bcbfe</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-11 07:55:08</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

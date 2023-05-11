@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_cmp_rb_op_param">
+    <sn_cmp_rb_op_param action="DELETE">
+        <interface display_value="New AWS LAMP Stack Interface">4464ce991b12a910c5ba97d7bd4bcba7</interface>
+        <name>CloudAccount</name>
+        <operation display_value="Stop">4d6442d91b12a910c5ba97d7bd4bcba4</operation>
+        <order>10</order>
+        <sys_class_name>sn_cmp_rb_op_param</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-18 15:17:29</sys_created_on>
+        <sys_id>d16442d91b12a910c5ba97d7bd4bcba7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CloudAccount</sys_name>
+        <sys_package display_value="GeneralUtils" source="0e3338441b18811001e40d82604bcbd3">0e3338441b18811001e40d82604bcbd3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</sys_scope>
+        <sys_update_name>sn_cmp_rb_op_param_d16442d91b12a910c5ba97d7bd4bcba7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-18 15:17:29</sys_updated_on>
+        <type>1</type>
+    </sn_cmp_rb_op_param>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</application>
+        <file_path/>
+        <instance_id>11fd2e98dbccc41091232f17d496192b</instance_id>
+        <instance_name>dev93507</instance_name>
+        <name>sn_cmp_rb_op_param_d16442d91b12a910c5ba97d7bd4bcba7</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_cmp_rb_op_param"><sn_cmp_rb_op_param action="INSERT_OR_UPDATE"><interface display_value="New AWS LAMP Stack Interface">4464ce991b12a910c5ba97d7bd4bcba7</interface><name>CloudAccount</name><operation display_value="Stop">4d6442d91b12a910c5ba97d7bd4bcba4</operation><order>10</order><sys_class_name>sn_cmp_rb_op_param</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-04-18 15:17:29</sys_created_on><sys_id>d16442d91b12a910c5ba97d7bd4bcba7</sys_id><sys_mod_count>0</sys_mod_count><sys_name>CloudAccount</sys_name><sys_package display_value="GeneralUtils" source="0e3338441b18811001e40d82604bcbd3">0e3338441b18811001e40d82604bcbd3</sys_package><sys_policy/><sys_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</sys_scope><sys_update_name>sn_cmp_rb_op_param_d16442d91b12a910c5ba97d7bd4bcba7</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-04-18 15:17:29</sys_updated_on><type>1</type></sn_cmp_rb_op_param></record_update>]]></payload>
+        <payload_hash>1408177097</payload_hash>
+        <record_name>CloudAccount</record_name>
+        <reverted_from/>
+        <source>76fcb2f31b012110c5ba97d7bd4bcbc4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-18 15:17:29</sys_created_on>
+        <sys_id>d96442d91b12a910c5ba97d7bd4bcbb8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18794f1389c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-18 15:17:29</sys_updated_on>
+        <type>OperationParameter</type>
+        <update_guid>d16442d9c412a91094f7407aa8d930b8</update_guid>
+        <update_guid_history>d16442d9c412a91094f7407aa8d930b8:1408177097</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="CloudAccount">3d6482d91b12a910c5ba97d7bd4bcb61</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-18 15:17:31</sys_created_on>
+        <sys_db_object display_value="" name="sn_cmp_rb_op_param">sn_cmp_rb_op_param</sys_db_object>
+        <sys_id>0c065a15ef3741e284d3fcfd697a2a64</sys_id>
+        <sys_metadata>d16442d91b12a910c5ba97d7bd4bcba7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CloudAccount</sys_name>
+        <sys_package display_value="GeneralUtils" source="0e3338441b18811001e40d82604bcbd3">0e3338441b18811001e40d82604bcbd3</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</sys_scope>
+        <sys_scope_delete display_value="">1fb02804876a4bd4876760612ddad339</sys_scope_delete>
+        <sys_update_name>sn_cmp_rb_op_param_d16442d91b12a910c5ba97d7bd4bcba7</sys_update_name>
+        <sys_update_version display_value="sn_cmp_rb_op_param_d16442d91b12a910c5ba97d7bd4bcba7">d96442d91b12a910c5ba97d7bd4bcbb8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-18 15:17:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
