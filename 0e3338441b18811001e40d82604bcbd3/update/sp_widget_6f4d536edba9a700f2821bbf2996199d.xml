@@ -2,8 +2,8 @@
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
         <client_script><![CDATA[function($scope) {
-	var backup_rating = 0;  // keeps the last rating when mousing over, restores if no new rating selected
-	var in_stars = false;   // keeps track of whether the mouse is in the stars div
+	backup_rating = 0;  // keeps the last rating when mousing over, restores if no new rating selected
+	in_stars = false;   // keeps track of whether the mouse is in the stars div
 
 	$scope.data.star_rating = 0;  // keeps current rating, based on last clicked or moused over
 	$scope.data.star_count = [];  
@@ -19,7 +19,10 @@
 		// if user has clicked the current rating then reset to zero
 		rating = (rating == backup_rating) ? 0 : rating;
 
-		$scope.page.field.value = "" + rating;
+		if ($scope.page.field) {
+			$scope.page.field.value = "" + rating;	
+		}
+
 		$scope.data.star_rating = rating;
 		backup_rating = rating;
 	};
@@ -83,7 +86,7 @@
         <description>Star rating widget for record producer in the service portal</description>
         <docs/>
         <field_list/>
-        <has_preview>false</has_preview>
+        <has_preview>true</has_preview>
         <id>star-rating</id>
         <internal>false</internal>
         <link/>
@@ -101,14 +104,14 @@
         <sys_created_by>TUAdmin_AC</sys_created_by>
         <sys_created_on>2018-11-06 18:43:44</sys_created_on>
         <sys_id>6f4d536edba9a700f2821bbf2996199d</sys_id>
-        <sys_mod_count>40</sys_mod_count>
+        <sys_mod_count>52</sys_mod_count>
         <sys_name>Star Rating</sys_name>
-        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_package display_value="GeneralUtils" source="0e3338441b18811001e40d82604bcbd3">0e3338441b18811001e40d82604bcbd3</sys_package>
         <sys_policy/>
         <sys_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</sys_scope>
         <sys_update_name>sp_widget_6f4d536edba9a700f2821bbf2996199d</sys_update_name>
         <sys_updated_by>aidan.cooper</sys_updated_by>
-        <sys_updated_on>2022-02-18 11:38:32</sys_updated_on>
+        <sys_updated_on>2023-09-04 15:40:23</sys_updated_on>
         <template><![CDATA[<div>
   <span class="star-rating star-rating-{{data.star_size}}"
         ng-mouseenter="mouse_enter()" 
@@ -118,8 +121,9 @@
        ng-mouseover="mouse_over(data.star_count[$index])" 
        ng-class="data.star_rating >= data.star_count[$index] ? 'fa fa-star' : 'fa fa-star-o'"  
        ng-click="click_star(data.star_count[$index])"></i>
-  </span>
-</div>]]></template>
+      </span>
+    <!--<pre>{{ data | json }}</pre>-->
+    </div>]]></template>
     </sp_widget>
     <sys_claim action="INSERT_OR_UPDATE">
         <claim_owner_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</claim_owner_scope>
