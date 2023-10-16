@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>Test</name>
+        <record_for_rollback>true</record_for_rollback>
+        <script><![CDATA[var gr = new GlideRecord('incident');
+gr.query();
+while(gr.next()) {
+	gs.info(gr.number)
+}]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>aidan.cooper</sys_created_by>
+        <sys_created_on>2023-09-07 09:41:46</sys_created_on>
+        <sys_id>0139c8cf4745711001612c44846d43e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Test</sys_name>
+        <sys_package display_value="GeneralUtils" source="0e3338441b18811001e40d82604bcbd3">0e3338441b18811001e40d82604bcbd3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</sys_scope>
+        <sys_update_name>sys_script_fix_0139c8cf4745711001612c44846d43e7</sys_update_name>
+        <sys_updated_by>aidan.cooper</sys_updated_by>
+        <sys_updated_on>2023-09-07 09:41:46</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>
