@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="DELETE">
+        <before>false</before>
+        <description/>
+        <name>Test</name>
+        <record_for_rollback>true</record_for_rollback>
+        <script><![CDATA[var gr = new GlideRecord('incident');
+gr.query();
+while(gr.next()) {
+	gs.info(gr.number)
+}]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>aidan.cooper</sys_created_by>
+        <sys_created_on>2023-09-07 09:41:46</sys_created_on>
+        <sys_id>0139c8cf4745711001612c44846d43e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Test</sys_name>
+        <sys_package display_value="GeneralUtils" source="0e3338441b18811001e40d82604bcbd3">0e3338441b18811001e40d82604bcbd3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</sys_scope>
+        <sys_update_name>sys_script_fix_0139c8cf4745711001612c44846d43e7</sys_update_name>
+        <sys_updated_by>aidan.cooper</sys_updated_by>
+        <sys_updated_on>2023-09-07 09:41:46</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</application>
+        <file_path/>
+        <instance_id>c5f6bc0f1b7c861819254089bd4bcb6b</instance_id>
+        <instance_name>dev240372</instance_name>
+        <name>sys_script_fix_0139c8cf4745711001612c44846d43e7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_fix"&gt;
+    &lt;sys_script_fix action="INSERT_OR_UPDATE"&gt;
+        &lt;before&gt;false&lt;/before&gt;
+        &lt;description/&gt;
+        &lt;name&gt;Test&lt;/name&gt;
+        &lt;record_for_rollback&gt;true&lt;/record_for_rollback&gt;
+        &lt;script&gt;&lt;![CDATA[var gr = new GlideRecord('incident');
+gr.query();
+while(gr.next()) {
+	gs.info(gr.number)
+}]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;sys_script_fix&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;aidan.cooper&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-09-07 09:41:46&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;0139c8cf4745711001612c44846d43e7&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Test&lt;/sys_name&gt;
+        &lt;sys_package display_value="GeneralUtils" source="0e3338441b18811001e40d82604bcbd3"&gt;0e3338441b18811001e40d82604bcbd3&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="GeneralUtils"&gt;0e3338441b18811001e40d82604bcbd3&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_script_fix_0139c8cf4745711001612c44846d43e7&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;aidan.cooper&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-09-07 09:41:46&lt;/sys_updated_on&gt;
+        &lt;unloadable&gt;false&lt;/unloadable&gt;
+    &lt;/sys_script_fix&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>-1667029080</payload_hash>
+        <record_name>Test</record_name>
+        <reverted_from/>
+        <source>5ebb988383f50210baf8f955eeaad30c</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>aidan.cooper</sys_created_by>
+        <sys_created_on>2024-04-30 14:00:45</sys_created_on>
+        <sys_id>decb50c383f50210baf8f955eeaad3e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18f2f4ecf670000001</sys_recorded_at>
+        <sys_updated_by>aidan.cooper</sys_updated_by>
+        <sys_updated_on>2024-04-30 14:00:45</sys_updated_on>
+        <type>Fix Script</type>
+        <update_guid>9ecb50c389f50210a8e3aab6f92ccde8</update_guid>
+        <update_guid_history>9ecb50c389f50210a8e3aab6f92ccde8:-1667029080</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>aidan.cooper</sys_created_by>
+        <sys_created_on>2024-05-20 09:11:34</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_fix">sys_script_fix</sys_db_object>
+        <sys_id>a0472ffa39b34008a2ce30721b024240</sys_id>
+        <sys_metadata>0139c8cf4745711001612c44846d43e7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Test</sys_name>
+        <sys_package display_value="GeneralUtils" source="0e3338441b18811001e40d82604bcbd3">0e3338441b18811001e40d82604bcbd3</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GeneralUtils">0e3338441b18811001e40d82604bcbd3</sys_scope>
+        <sys_scope_delete display_value="">1fb02804876a4bd4876760612ddad339</sys_scope_delete>
+        <sys_update_name>sys_script_fix_0139c8cf4745711001612c44846d43e7</sys_update_name>
+        <sys_update_version display_value="sys_script_fix_0139c8cf4745711001612c44846d43e7">decb50c383f50210baf8f955eeaad3e8</sys_update_version>
+        <sys_updated_by>aidan.cooper</sys_updated_by>
+        <sys_updated_on>2024-05-20 09:11:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
